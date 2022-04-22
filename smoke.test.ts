@@ -2,7 +2,7 @@ require('selenium-webdriver/chrome');
 require('selenium-webdriver/firefox');
 require('chromedriver')
 
-import { BrowserHelper} from "./browser.helper";
+import { BrowserHelper } from "./browser.helper";
 import { GetPageLocators } from "./page.objects";
 
 const rootURL = 'https://auction-app-1.herokuapp.com/';
@@ -21,8 +21,8 @@ describe('Smoke tests for Auction Application', () => {
 
       await browser.goToPage(rootURL);
       await browser.driver.sleep(5000);
+      expect(await browser.isEnabled(pageLocators.getHomePage().searchBtn));
       await browser.enterDataAndClick(pageLocators.getHomePage().searchBox, "Monitor", pageLocators.getHomePage().searchBtn);
-      await browser.driver.sleep(500);
       expect(await browser.getText(pageLocators.getSearchPage().searchMessage)).toEqual("Search result for Monitor");
       await browser.driver.sleep(2000);
       await browser.click(pageLocators.getSearchPage().productUrl);
@@ -45,7 +45,7 @@ describe('Smoke tests for Auction Application', () => {
       await browser.driver.sleep(1000);
       expect(await browser.getText(pageLocators.getHomePage().loginBtn)).toEqual("Login");
       await browser.driver.sleep(5000);
-      
+
     });
 
     it('User is able to log in to their account and then place a bid for the product', async () => {
@@ -63,11 +63,11 @@ describe('Smoke tests for Auction Application', () => {
       await browser.driver.sleep(1000);
       expect(await browser.getText(pageLocators.getShopPage().message)).toEqual("Congrats! You are the highest bidder!");
       await browser.driver.sleep(5000);
-      
+
     });
 
   });
-    
+
   afterAll(() => {
     browser.driver.quit();
   });

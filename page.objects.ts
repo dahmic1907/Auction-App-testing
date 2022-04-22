@@ -8,25 +8,24 @@ export class GetPageLocators {
 
     constructor() {
     }
-    
-    public getHomePage(){
+
+    public getHomePage() {
         return new HomePage();
     }
-    public getLoginPage(){
+    public getLoginPage() {
         return new LoginPage();
     }
 
-    public getSearchPage(){
+    public getSearchPage() {
         return new SearchPage();
     }
 
-    public getRegistrationPage(){
+    public getRegistrationPage() {
         return new RegistrationPage();
-    } 
-
-    public getShopPage(){
-        return new ShopPage();
     }
 
-
+    public getShopPage() {
+        return new ShopPage();
+    }
+    
 }
