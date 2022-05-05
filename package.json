@@ -14,7 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.4.1",
-    "chromedriver": "^99.0.0",
+    "chromedriver": "^101.0.0",
     "geckodriver": "^3.0.1",
     "jest": "^27.5.1",
     "selenium-webdriver": "^3.6.0",
