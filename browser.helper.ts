@@ -19,7 +19,7 @@ export class BrowserHelper {
     async goToPage(link: string) {
         try {
             return this.driver.get(link);
-        } catch (excepion: any) {
+        } catch (excepion) {
 
             console.log("Exception message is: " + excepion);
         }
