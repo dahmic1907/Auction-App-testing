@@ -1,4 +1,5 @@
 import { WebDriver } from "selenium-webdriver";
+import { Options } from "selenium-webdriver/chrome";
 
 require('selenium-webdriver/chrome');
 require('selenium-webdriver/firefox');
@@ -15,7 +16,9 @@ export class DriverSetup {
   }
 
   initializeWebDriver() {
-    this.driver = new Builder().forBrowser('chrome').build();
+    const opts = new Options()
+    opts.addArguments('--headless');
+    this.driver = new Builder().forBrowser('chrome').setChromeOptions(opts).build();
     this.waitForDriver(this.driver);
     this.waitForWindowMaximize(this.driver);
     console.log('Webdriver initialized and running.');
