@@ -5,7 +5,7 @@ require('chromedriver')
 import { BrowserHelper } from "./browser.helper";
 import { GetPageLocators } from "./page.objects";
 
-const rootURL = 'https://auction-app-1.herokuapp.com/';
+const rootURL = 'auction.racun.ninja';
 
 
 
