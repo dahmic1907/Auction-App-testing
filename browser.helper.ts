@@ -36,7 +36,8 @@ export class BrowserHelper {
 
     async getText(elementLocator: any) {
         try {
-            return (await this.driver.wait(until.elementLocated(elementLocator))).getText();
+            this.driver.sleep(1000);
+            return (await this.driver.findElement(elementLocator)).getText();
 
         } catch (excepion) {
             console.log("Element locator is " + elementLocator + "\nException message is: " + excepion);

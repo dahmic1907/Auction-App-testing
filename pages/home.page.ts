@@ -12,7 +12,7 @@ export class HomePage {
     signUpBtn = By.xpath('//*[@id="root"]/header/div[1]/div/div[2]/a[2]');
     signInBtn = By.xpath('//*[@id="root"]/header/div[1]/div/p/a[1]');
     logOutBtn = By.xpath('//*[@id="root"]/header/div[1]/div/div[2]/a');
-    loginBtn = By.xpath('/html/body/div/header/div[1]/div/div[2]/a[1]');
+    loginBtn = By.xpath('//*[@id="root"]/header/div[1]/div/div[2]/a[1]');
     homeIcon = By.className('icon-home');
     homeBtn = By.xpath('//*[@id="root"]/header/div[2]/div/div/div[2]/div/a[1]');
     womenBtn = By.id('1');

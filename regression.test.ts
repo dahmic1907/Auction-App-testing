@@ -19,15 +19,15 @@ describe('Regression test for Auction Application', () => {
 
     describe('Search option', () => {
 
-        it('Check Search option by inserting Shirt item', async () => {
+        it('Check Search option by inserting Blanket item', async () => {
 
             await browser.goToPage(rootURL);
             await browser.driver.sleep(2000);
             expect(await browser.isEnabled(pageLocators.getHomePage().searchBtn)).toBeTruthy;
-            await browser.enterDataAndClick(pageLocators.getHomePage().searchBox, "Shirt", pageLocators.getHomePage().searchBtn);
-            expect(await browser.getText(pageLocators.getSearchPage().searchMessage)).toEqual("Search result for Shirt");
+            await browser.enterDataAndClick(pageLocators.getHomePage().searchBox, "Blanket", pageLocators.getHomePage().searchBtn);
+            expect(await browser.getText(pageLocators.getSearchPage().searchMessage)).toEqual("Search result for Blanket");
             await browser.click(pageLocators.getSearchPage().productUrl);
-            expect(await browser.getText(pageLocators.getSearchPage().productTitle)).toContain("Shirt");
+            expect(await browser.getText(pageLocators.getSearchPage().productTitle)).toContain("Blanket");
 
         });
 
@@ -68,7 +68,7 @@ describe('Regression test for Auction Application', () => {
 
         });
 
-        it('Redirecting to the Men page by clicking the Men button', async () => {
+     /*    it('Redirecting to the Men page by clicking the Men button', async () => {
 
             await browser.driver.sleep(2000);
             await browser.click(pageLocators.getHomePage().logo);
@@ -77,7 +77,7 @@ describe('Regression test for Auction Application', () => {
             await browser.driver.sleep(500);
             expect(await browser.getText(pageLocators.getShopPage().shopPlaceholder)).toContain('Men');
 
-        });
+        }); */
 
         it('Redirecting to the Technology page by clicking the Technology button', async () => {
 

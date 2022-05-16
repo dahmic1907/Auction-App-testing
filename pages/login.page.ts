@@ -13,4 +13,5 @@ export class LoginPage {
     errorPassword = By.xpath('//*[@id="password-helper-text"]');
     errorEmail = By.xpath('//*[@id="email-helper-text"]');
     loginBtn = By.xpath('//*[@id="root"]/header/div[1]/div/div[2]/a[1]');
+    loginHomeBtn = By.xpath('//*[@id="root"]/header/div[1]/div/p/a[1]');
 }
